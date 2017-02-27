@@ -1,0 +1,25 @@
+<div class="container-fluid">
+		<div class="card">
+			<div class="card-header">
+				<h3 class="float-left">Clubs</h3>
+				<button class="btn btn-success float-right" routerLink="/create">Create</button>
+			</div>
+			<div class="card-block">
+				<div class="row">
+					<div class="col-lg-3 col-sm-4 card-container" *ngFor="let club  of clubs | async">
+						<div class="card">
+							<img class="card-img-top" src="{{club.link}}">
+							<div class="card-block">
+								<h4 class="card-title">{{club.name}}</h4>
+								<div class="card-text">
+									<div>{{club.description}}</div>
+								</div>
+								<div style="clear:both"></div>
+								<button class="btn btn-primary" (click)="openClub(club.$key)">Open</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>

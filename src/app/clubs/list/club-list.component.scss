@@ -1,0 +1,36 @@
+.small-image {
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.card-container {
+  display: flex;
+
+  > .card {
+    flex-grow: 1;
+    min-height: 270px;
+    margin-bottom: 15px;
+
+    > img {
+      height: 128px;
+      width: auto;
+      margin: 0 auto;
+    }
+
+    .card-text {
+      overflow: hidden;
+      margin-bottom: 45px;
+
+      > div {
+        overflow: hidden;
+        max-height: 100px;
+      }
+    }
+
+    button {
+      position: absolute;
+      bottom: 1.25rem;;
+      right: 1.25rem;
+    }
+  }
+}
